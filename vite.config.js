@@ -5,9 +5,8 @@ import netlify from "@netlify/vite-plugin";
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd(), "");
   return {
-    base: `/${env.VITE_REPO_NAME}/`,
+    base: `/`,
     plugins: [react(), tailwindcss(), netlify()],
     server: {
       open: true,
